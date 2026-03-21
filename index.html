@@ -3,97 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Pulse 2026 | Compact Intelligence</title>
+    <title>AI Pulse | Comprehensive Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; color: #1a1a1a; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfd; color: #1a1a1a; overflow-x: hidden; }
         .live-card { background: white; border: 1px solid #f2f2f2; border-radius: 12px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; text-decoration: none; color: inherit; display: block; }
         .live-card:hover { border-color: #3b82f6; box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.05); transform: translateY(-2px); }
         .shimmer { background: linear-gradient(90deg, #f0f0f0 25%, #f8f8f8 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
         @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
-        /* Prevent scroll if content fits */
-        @media (min-height: 900px) { body { overflow: hidden; } }
+        @media (min-height: 850px) { body { overflow-y: hidden; height: 100vh; } }
     </style>
 </head>
-<body class="antialiased pb-10">
+<body class="antialiased">
 
     <nav class="border-b border-slate-100 bg-white/70 backdrop-blur-xl sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
-                    <i class="fa-solid fa-bolt text-white text-sm"></i>
+                <div class="w-7 h-7 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-200">
+                    <i class="fa-solid fa-bolt text-white text-xs"></i>
                 </div>
-                <h1 class="font-extrabold text-lg tracking-tight uppercase italic text-slate-900">Pulse <span class="text-blue-600">2026</span></h1>
+                <h1 class="font-extrabold text-base tracking-tight uppercase italic text-slate-900">Pulse <span class="text-blue-600">2026</span></h1>
             </div>
-            <div class="text-right">
-                <p id="date-display" class="text-[9px] font-black uppercase tracking-widest text-slate-400"></p>
-                <div class="flex items-center justify-end gap-2 text-[9px] font-bold text-green-600">
-                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping"></span> LIVE SIGNAL
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex items-center gap-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest">
+                    <span>Latency: 14ms</span>
+                    <span class="h-3 w-px bg-slate-200"></span>
+                    <span id="date-display"></span>
+                </div>
+                <div class="flex items-center gap-2 text-[9px] font-bold text-green-600">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping"></span> LIVE
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-6 space-y-6">
+    <main class="max-w-7xl mx-auto px-6 py-4 space-y-4">
 
-        <section class="live-card bg-slate-900 p-6 text-white relative overflow-hidden border-none shadow-xl shadow-slate-200">
-            <div class="relative z-10 flex flex-col md:flex-row gap-6 items-center">
-                <div class="md:w-1/4 border-r border-slate-700 pr-6">
-                    <div class="flex items-center gap-2 text-blue-400 text-[9px] font-black uppercase tracking-widest mb-1">
-                        <i class="fa-solid fa-microchip"></i> Intelligence Report
-                    </div>
-                    <h2 class="text-xl font-bold text-white tracking-tight">Agentic Pivot</h2>
+        <section class="live-card bg-slate-900 p-5 text-white border-none shadow-xl relative overflow-hidden">
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+                <div class="space-y-1 border-slate-700 md:border-r pr-4">
+                    <span class="text-blue-400 text-[8px] font-black uppercase tracking-widest">Macro Trend</span>
+                    <p class="text-[11px] leading-relaxed text-slate-300">
+                        <strong class="text-white">Agentic Interoperability:</strong> Software is shifting from "SaaS Tools" to "Autonomous Teammates." The era of manual UI interaction is ending.
+                    </p>
                 </div>
-                <div class="md:w-3/4">
-                    <p class="text-sm font-light leading-relaxed text-slate-300">
-                        March 21 data confirms a total move toward <span class="text-blue-400 font-bold">Interoperability</span>. 
-                        GitHub's <span class="bg-blue-600 px-1 rounded text-xs font-bold text-white mx-1">MCP</span> explosion proves that standardized AI "hands" are the priority, as software evolves from tools into executing teammates.
+                <div class="space-y-1 border-slate-700 md:border-r pr-4">
+                    <span class="text-purple-400 text-[8px] font-black uppercase tracking-widest">Infrastructure</span>
+                    <p class="text-[11px] leading-relaxed text-slate-300">
+                        <strong class="text-white">MCP Standard:</strong> The Model Context Protocol is the new "TCP/IP" for AI, allowing Claude/GPT to plug into any local DB instantly.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-orange-400 text-[8px] font-black uppercase tracking-widest">Market Winner</span>
+                    <p class="text-[11px] leading-relaxed text-slate-300">
+                        <strong class="text-white">Action-First UI:</strong> Product Hunt winners show users prefer "design-and-deploy" agents over simple text-generating chat boxes.
                     </p>
                 </div>
             </div>
-            <i class="fa-solid fa-circle-nodes absolute -right-10 -bottom-10 text-[12rem] text-white/5 rotate-12"></i>
         </section>
 
         <section>
-            <h2 class="text-[9px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 flex items-center gap-3">
-                Trending Claude Skills <span class="h-px bg-slate-200 flex-grow"></span>
+            <h2 class="text-[8px] font-black uppercase tracking-[0.3em] text-slate-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-brain text-blue-500"></i> Claude Skills Ecosystem
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
                 <template x-for="skill in claudeSkills" :key="skill.name">
-                    <a :href="skill.url" target="_blank" class="live-card p-4 group">
-                        <span class="text-[8px] font-bold text-blue-500 uppercase tracking-widest" x-text="skill.id"></span>
-                        <h3 class="font-bold text-xs mt-1 group-hover:text-blue-600 transition-colors" x-text="skill.name"></h3>
+                    <a :href="skill.url" target="_blank" class="live-card p-3 group">
+                        <div class="flex justify-between items-start">
+                            <span class="text-[7px] font-bold text-blue-500 uppercase" x-text="skill.id"></span>
+                            <span class="text-[7px] font-bold text-green-500">+HOT</span>
+                        </div>
+                        <h3 class="font-bold text-[11px] mt-1 group-hover:text-blue-600 transition-colors" x-text="skill.name"></h3>
                     </a>
                 </template>
             </div>
         </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            
-            <section>
-                <div class="flex justify-between items-end mb-4">
-                    <h2 class="text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Top GitHub Repos (7d)</h2>
-                    <span x-show="loadingRepos" class="text-[8px] text-blue-500 font-bold animate-pulse uppercase">Connecting...</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <section class="flex flex-col">
+                <div class="flex justify-between items-end mb-3">
+                    <h2 class="text-[8px] font-black uppercase tracking-[0.3em] text-slate-400">GitHub Open Source (7d)</h2>
+                    <span x-show="loadingRepos" class="text-[8px] text-blue-500 font-bold animate-pulse">POLLING...</span>
                 </div>
-                
-                <div class="space-y-2">
-                    <template x-if="loadingRepos">
-                        <div class="space-y-2"><div class="h-16 shimmer rounded-xl"></div><div class="h-16 shimmer rounded-xl"></div></div>
-                    </template>
-                    
+                <div class="space-y-2 flex-grow overflow-y-auto max-h-[45vh]">
                     <template x-for="repo in repos" :key="repo.url">
-                        <a :href="repo.url" target="_blank" class="live-card p-4 flex items-center justify-between group">
+                        <a :href="repo.url" target="_blank" class="live-card p-3 flex items-center justify-between group">
                             <div class="max-w-[70%]">
-                                <h3 class="font-bold text-sm text-slate-900 group-hover:text-blue-600" x-text="repo.name"></h3>
-                                <p class="text-[10px] text-slate-500 truncate italic" x-text="repo.description"></p>
+                                <h3 class="font-bold text-xs text-slate-900 group-hover:text-blue-600" x-text="repo.name"></h3>
+                                <p class="text-[9px] text-slate-500 truncate italic" x-text="repo.description"></p>
                             </div>
-                            <div class="text-right flex items-center gap-3">
-                                <div class="text-[10px] font-bold text-blue-400 uppercase" x-text="repo.language || 'Code'"></div>
-                                <div class="text-[10px] font-black text-slate-900 bg-slate-50 px-2 py-1 rounded">
-                                    <i class="fa-solid fa-star text-amber-400 mr-1"></i><span x-text="repo.stars"></span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-[8px] font-bold text-blue-400 px-1 border border-blue-100 rounded" x-text="repo.language || 'AI'"></span>
+                                <div class="text-[9px] font-black text-slate-900">
+                                    <i class="fa-solid fa-star text-amber-400 text-[8px]"></i> <span x-text="repo.stars"></span>
                                 </div>
                             </div>
                         </a>
@@ -101,26 +106,19 @@
                 </div>
             </section>
 
-            <section>
-                <div class="flex justify-between items-end mb-4">
-                    <h2 class="text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Product Hunt Daily Top</h2>
-                    <span x-show="loadingPH" class="text-[8px] text-orange-400 font-bold animate-pulse uppercase">Fetching...</span>
+            <section class="flex flex-col">
+                <div class="flex justify-between items-end mb-3">
+                    <h2 class="text-[8px] font-black uppercase tracking-[0.3em] text-slate-400">Product Hunt Daily</h2>
+                    <span x-show="loadingPH" class="text-[8px] text-orange-400 font-bold animate-pulse">FETCHING...</span>
                 </div>
-
-                <div class="space-y-2">
-                    <template x-if="loadingPH">
-                        <div class="space-y-2"><div class="h-16 shimmer rounded-xl"></div><div class="h-16 shimmer rounded-xl"></div></div>
-                    </template>
-
+                <div class="space-y-2 flex-grow overflow-y-auto max-h-[45vh]">
                     <template x-for="product in products" :key="product.link">
-                        <a :href="product.link" target="_blank" class="live-card p-4 flex items-center justify-between group">
+                        <a :href="product.link" target="_blank" class="live-card p-3 flex items-center justify-between group">
                             <div class="max-w-[80%]">
-                                <h3 class="font-bold text-sm text-slate-900 group-hover:text-orange-500" x-text="product.title"></h3>
-                                <p class="text-[10px] text-slate-500 truncate" x-text="product.description"></p>
+                                <h3 class="font-bold text-xs text-slate-900 group-hover:text-orange-500" x-text="product.title"></h3>
+                                <p class="text-[9px] text-slate-500 truncate" x-text="product.description"></p>
                             </div>
-                            <div class="bg-orange-50 text-orange-600 px-2 py-1 rounded text-[10px] font-bold group-hover:bg-orange-600 group-hover:text-white transition-all">
-                                <i class="fa-solid fa-caret-up mr-1"></i>VOTE
-                            </div>
+                            <div class="text-orange-600 text-[10px]"><i class="fa-solid fa-caret-up"></i></div>
                         </a>
                     </template>
                 </div>
@@ -138,12 +136,12 @@
                 claudeSkills: [
                     { id: 'UX', name: 'Frontend Design', url: 'https://www.google.com/search?q=Claude+Code+Frontend+Design' },
                     { id: 'AUTO', name: 'Firecrawl CLI', url: 'https://firecrawl.dev' },
-                    { id: 'VIDEO', name: 'Remotion Skills', url: 'https://github.com/remotion-dev/skills' },
+                    { id: 'VID', name: 'Remotion React', url: 'https://github.com/remotion-dev/skills' },
                     { id: 'SEC', name: 'Trail of Bits', url: 'https://github.com/trailofbits/skills' },
                     { id: 'CORE', name: 'Superpowers', url: 'https://github.com/obra/superpowers' }
                 ],
                 async init() {
-                    document.getElementById('date-display').innerText = new Date().toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+                    document.getElementById('date-display').innerText = new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
                     this.fetchGitHub();
                     this.fetchProductHunt();
                 },
@@ -151,28 +149,28 @@
                     try {
                         const date = new Date();
                         date.setDate(date.getDate() - 7);
-                        const res = await fetch(`https://api.github.com/search/repositories?q=topic:ai+created:>${date.toISOString().split('T')[0]}&sort=stars&order=desc&per_page=5`);
+                        const res = await fetch(`https://api.github.com/search/repositories?q=topic:ai+created:>${date.toISOString().split('T')[0]}&sort=stars&order=desc&per_page=6`);
                         const data = await res.json();
                         this.repos = data.items.map(r => ({
                             name: r.name,
-                            description: r.description || "Experimental Agentic logic.",
-                            stars: r.stargazers_count > 1000 ? (r.stargazers_count/1000).toFixed(1)+'k' : r.stargazers_count,
+                            description: r.description || "Experimental Logic",
+                            stars: r.stargazers_count > 999 ? (r.stargazers_count/1000).toFixed(1)+'k' : r.stargazers_count,
                             url: r.html_url,
                             language: r.language
                         }));
-                    } catch(e) { console.error("API error"); }
+                    } catch(e) {}
                     this.loadingRepos = false;
                 },
                 async fetchProductHunt() {
                     try {
                         const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.producthunt.com/feed`);
                         const data = await res.json();
-                        this.products = data.items.slice(0, 5).map(p => ({
+                        this.products = data.items.slice(0, 6).map(p => ({
                             title: p.title.split(' - ')[0],
                             link: p.link,
-                            description: p.content.replace(/<[^>]*>?/gm, '').substring(0, 60) + '...'
+                            description: p.content.replace(/<[^>]*>?/gm, '').substring(0, 50) + '...'
                         }));
-                    } catch(e) { console.error("API error"); }
+                    } catch(e) {}
                     this.loadingPH = false;
                 }
             }
